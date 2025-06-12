@@ -38,24 +38,25 @@ body {
 }
 
 
-.youtube-musica {
-  margin: 20px;
+.video-container {
+  text-align: center;
+  margin: 30px 0;
 }
 
-.youtube-musica button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #e91e63;
+.video-container button {
+  font-size: 18px;
+  padding: 12px 24px;
+  background-color: #2196f3;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  margin-bottom: 20px;
   transition: background-color 0.3s ease;
 }
 
-.youtube-musica button:hover {
-  background-color: #c2185b;
+.video-container button:hover {
+  background-color: #1976d2;
 }
 
 .galeria .fotos {

@@ -8,10 +8,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
 </head>
+
+<script>
+  function iniciarVideo() {
+    const playerDiv = document.getElementById("video-player");
+
+    // Evita recriar o vídeo se o botão for clicado mais de uma vez
+    if (playerDiv.innerHTML === "") {
+      const iframe = document.createElement("iframe");
+      iframe.width = "560";
+      iframe.height = "315";
+      iframe.src = "https://www.youtube.com/watch?v=eG4mIKjrOq0&pp=ygUcbWUgZW5jb250cmEgY2hhcmxpZSBicm93biBqcg%3D%3D";
+      iframe.title = "Videoclipe - Me Encontra";
+      iframe.frameBorder = "0";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+      iframe.allowFullscreen = true;
+      playerDiv.appendChild(iframe);
+    }
+  }
+</script>
+
+
 <body>
-  <!-- Música do Spotify -->
-  <div class="youtube-musica">
-  <button onclick="tocarMusica()">🎵 Tocar Música</button>
+  <div class="video-container">
+  <button onclick="iniciarVideo()">▶️ Assistir Videoclipe</button>
+  <div id="video-player"></div>
 </div>
 
 <script>
